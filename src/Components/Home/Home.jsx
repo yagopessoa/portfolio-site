@@ -20,7 +20,7 @@ const Home = () => {
           Coded with ♥ by
           {` `}
           <a
-            href="http://newsapi.org"
+            href="https://www.linkedin.com/in/yagopessoa"
             target="_blank"
             rel="noopener noreferrer"
           >
