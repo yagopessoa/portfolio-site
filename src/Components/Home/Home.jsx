@@ -1,8 +1,18 @@
 import React from 'react';
 import '../../App.css';
 import { Provider } from 'react-redux';
-import { Title, Footer } from './Home.styles';
+import {
+  Container,
+  Title,
+  Footer,
+  SocialContainer,
+  CircularButtonLink
+} from './Home.styles';
 import store from '../../Redux/store';
+import PortfolioCard from './PortfolioCard';
+import { PROJECTS } from '../../utils';
+import Linkedin from '../Icons/Linkedin';
+import Github from '../Icons/Github';
 
 const Home = () => {
   const currentYear = () => {
@@ -14,7 +24,30 @@ const Home = () => {
     <div>
       <header className="App">
         <Provider store={store}>
-          <Title>Hello World!</Title>
+          <Container>
+            <Title>Portfolio - Yago Pessoa</Title>
+            <SocialContainer>
+              <CircularButtonLink
+                href="https://www.linkedin.com/in/yagopessoa"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Linkedin"
+              >
+                <Linkedin />
+              </CircularButtonLink>
+              <CircularButtonLink
+                href="https://github.com/yagopessoa?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Github"
+              >
+                <Github />
+              </CircularButtonLink>
+            </SocialContainer>
+            {PROJECTS.map(props => (
+              <PortfolioCard key={props.title} {...props} />
+            ))}
+          </Container>
         </Provider>
         <Footer caption>
           Coded with ♥ by
