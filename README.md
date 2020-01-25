@@ -4,11 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Hosted at
 
-### [sitem](https://netlify.com)
+### [https://yago-portfolio.netlify.com](https://yago-portfolio.netlify.com)
 
 ## Available Scripts
-
-After you got your API key set up, in the project directory, you can run:
 
 ### `npm start`
 
